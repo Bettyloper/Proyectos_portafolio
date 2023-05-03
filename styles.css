@@ -1,0 +1,139 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300;400&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif, 'Montserrat', sans-serif;
+    background-image: url(img/F3.jpg)
+}
+
+.contact{
+    background-color: #fff;
+    min-height: 600px;
+    margin-top: 80px;
+    margin-left: 160px;
+    height:85vh;
+    width:150vh;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-row: 1fr;
+} 
+
+.contact_form{
+    grid-column: 5/8;
+    place-self: center;
+    display: grid;
+    width: 80%;
+    gap: 30px;
+    margin-left: 20px;
+}
+
+.contact_img{
+    margin: 5px;
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    
+}
+.contact_picture2{
+    display: none;
+}
+
+.contact_picture{
+    width: 140%;
+}
+
+.contact_title{
+    font-size: 3rem;
+    color: #3d21da;
+    margin-bottom: 5px;
+}
+
+.contact_title::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: rgb(222, 141, 2);
+    margin-top: 10px;
+}
+
+.input{
+    padding: 18px 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+
+.input--area{
+    resize: none;
+    height: 150px;
+}
+
+.botones{
+    display:flex;
+    justify-content: space-around;
+}
+
+.contact_cta {
+    background: hsl(248, 87%, 53%);;
+    width: 150px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    margin-left: 20px;
+    padding: 18px 0;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 2px 10px -4px rgba(0, 0, 0, .5);
+    
+}
+
+.contact_reset{
+    background: hsl(248, 87%, 53%);
+    width: 150px;
+    color: #fff;
+    font-family: 'Lato', sans-serif;
+    padding: 18px 0;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-weight: 700;
+    box-shadow: 0 2px 10px -4px rgba(0, 0, 0, .5) ;
+}
+
+@media screen and (max-width: 779px) {
+    .contact{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        margin-left: 140px;
+        height:180vh;
+        width:80vh;
+    }
+    
+    .contact_form {
+        grid-column: 1/-1;
+        padding: 0px;
+        width: 80%;
+        margin: 0;
+    }
+
+
+    .contact_img {
+        grid-column:1/-1; 
+        justify-content:center;
+        padding:2px;
+    
+    }
+
+    .contact_picture{
+        display:none;
+    }
+    .contact_picture2 {
+        display:block;
+        max-width: 500px;
+    }
+    
+}
